@@ -76,6 +76,7 @@ namespace PainelRobos.ViewModels
 			_backgroundInicio = new BackgroundWorker();
 			_backgroundInicio.DoWork += _backgroundInicio_DoWork;
 			_backgroundInicio.RunWorkerAsync();
+			
 		}
 
 		private void _backgroundInicio_DoWork(object sender, DoWorkEventArgs e)
