@@ -59,6 +59,14 @@ namespace PainelRobos.ViewModels
 			set { _mensagemInicio = value; OnPropertyChanged(); }
 		}
 
+		private bool _tempoParado;
+
+		public bool TempoParado
+		{
+			get { return _tempoParado; }
+			set { _tempoParado = value; OnPropertyChanged(); }
+		}
+
 
 		#endregion
 

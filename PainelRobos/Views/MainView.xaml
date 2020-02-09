@@ -10,21 +10,109 @@
     <Window.Resources>
         <Path x:Key="iconMainWindow" Data="M144 96L424 96 352 216 424 336 144 336 144 96Z" Fill="Black"/>
         <GeometryDrawing x:Key="imgFooDrawing" Brush="Black">
-            
+
             <GeometryDrawing.Geometry>
                 <PathGeometry Figures="M0.5,1.5h4   c0,0,3.5-1,7.5-1s7.5,1,7.5,1h4l-1,7l-1,1L21,18.4991055L15.4978867,23.5H8.5L3,18.4991055L2.5,9.5l-1-1L0.5,1.5z"  FillRule="NonZero"/>
+
             </GeometryDrawing.Geometry>
         </GeometryDrawing>
         <DrawingBrush x:Key="imgFoo" ViewboxUnits="Absolute" Viewbox="0,0,128,128"
               Drawing="{StaticResource imgFooDrawing}">
         </DrawingBrush>
-        <!--<DrawingBrush x:Key="imgIcon" ViewboxUnits="Absolute" Viewbox="0,0,128,128"
-              Drawing="{Sta}">
-        </DrawingBrush>-->
     </Window.Resources>
 
     <Window.Icon>
-        <DrawingImage Drawing="{DynamicResource imgFooDrawing}"/>
+        <DrawingImage>
+            <DrawingImage.Drawing>
+                <DrawingGroup ClipGeometry="M0,0 V24 H24 V0 H0 Z">
+                    <DrawingGroup Opacity="1">
+                        <GeometryDrawing Geometry="F1 M24,24z M0,0z M0.5,1.5L4.5,1.5C4.5,1.5 8,0.5 12,0.5 16,0.5 19.5,1.5 19.5,1.5L23.5,1.5 22.5,8.5 21.5,9.5 21,18.4991055 15.4978867,23.5 8.5,23.5 3,18.4991055 2.5,9.5 1.5,8.5 0.5,1.5z">
+                            <GeometryDrawing.Pen>
+                                <Pen Brush="#FF303C42" Thickness="1" StartLineCap="Round" EndLineCap="Round" LineJoin="Round" MiterLimit="10" />
+                            </GeometryDrawing.Pen>
+                        </GeometryDrawing>
+                        <GeometryDrawing Geometry="F1 M24,24z M0,0z M4.5,1.5L4.5,1.5 5,4 12,8.5 19,4 19.5,1.5">
+                            <GeometryDrawing.Pen>
+                                <Pen Brush="#FF303C42" Thickness="1" StartLineCap="Round" EndLineCap="Round" LineJoin="Round" MiterLimit="10" />
+                            </GeometryDrawing.Pen>
+                        </GeometryDrawing>
+                        <GeometryDrawing Geometry="F1 M24,24z M0,0z M9,6.58L9,6.58 10,12.5 10,18.5 13.5,18.5 13.5,12.5 14.5,6.8929">
+                            <GeometryDrawing.Pen>
+                                <Pen Brush="#FF303C42" Thickness="1" StartLineCap="Round" EndLineCap="Round" LineJoin="Round" MiterLimit="10" />
+                            </GeometryDrawing.Pen>
+                        </GeometryDrawing>
+                        <GeometryDrawing>
+                            <GeometryDrawing.Pen>
+                                <Pen Brush="#FF303C42" Thickness="1" StartLineCap="Round" EndLineCap="Round" LineJoin="Round" MiterLimit="10" />
+                            </GeometryDrawing.Pen>
+                            <GeometryDrawing.Geometry>
+                                <LineGeometry StartPoint="21.5,9.5" EndPoint="19,11.5833" />
+                            </GeometryDrawing.Geometry>
+                        </GeometryDrawing>
+                        <GeometryDrawing Geometry="F1 M24,24z M0,0z M17.5,21.6803L17.5,21.6803 17.5,14.5 19,13.5 19,11.5 13.5,12.5 17.5,14.5">
+                            <GeometryDrawing.Pen>
+                                <Pen Brush="#FF303C42" Thickness="1" StartLineCap="Round" EndLineCap="Round" LineJoin="Round" MiterLimit="10" />
+                            </GeometryDrawing.Pen>
+                        </GeometryDrawing>
+                        <GeometryDrawing>
+                            <GeometryDrawing.Pen>
+                                <Pen Brush="#FF303C42" Thickness="1" StartLineCap="Round" EndLineCap="Round" LineJoin="Round" MiterLimit="10" />
+                            </GeometryDrawing.Pen>
+                            <GeometryDrawing.Geometry>
+                                <LineGeometry StartPoint="2.5,9.5" EndPoint="5,11.5833" />
+                            </GeometryDrawing.Geometry>
+                        </GeometryDrawing>
+                        <GeometryDrawing Geometry="F1 M24,24z M0,0z M6.5,21.6815L6.5,21.6815 6.5,14.5 5,13.5 5,11.5 10,12.5 6.5,14.5">
+                            <GeometryDrawing.Pen>
+                                <Pen Brush="#FF303C42" Thickness="1" StartLineCap="Round" EndLineCap="Round" LineJoin="Round" MiterLimit="10" />
+                            </GeometryDrawing.Pen>
+                        </GeometryDrawing>
+                        <GeometryDrawing Geometry="F1 M24,24z M0,0z M8.5,2.5L8.5,2.5 15.5,2.5 12,5.5z">
+                            <GeometryDrawing.Pen>
+                                <Pen Brush="#FF303C42" Thickness="1" StartLineCap="Round" EndLineCap="Round" LineJoin="Round" MiterLimit="10" />
+                            </GeometryDrawing.Pen>
+                        </GeometryDrawing>
+                        <GeometryDrawing Geometry="F1 M24,24z M0,0z M8.5,23.5L8.5,23.5 9.5,20.5 14,20.5 15.4979,23.5">
+                            <GeometryDrawing.Pen>
+                                <Pen Brush="#FF303C42" Thickness="1" StartLineCap="Round" EndLineCap="Round" LineJoin="Round" MiterLimit="10" />
+                            </GeometryDrawing.Pen>
+                        </GeometryDrawing>
+                        <GeometryDrawing>
+                            <GeometryDrawing.Pen>
+                                <Pen Brush="#FF303C42" Thickness="1" StartLineCap="Round" EndLineCap="Round" LineJoin="Round" MiterLimit="10" />
+                            </GeometryDrawing.Pen>
+                            <GeometryDrawing.Geometry>
+                                <LineGeometry StartPoint="2.5,4.5" EndPoint="7.5,8.5" />
+                            </GeometryDrawing.Geometry>
+                        </GeometryDrawing>
+                        <GeometryDrawing>
+                            <GeometryDrawing.Pen>
+                                <Pen Brush="#FF303C42" Thickness="1" StartLineCap="Round" EndLineCap="Round" LineJoin="Round" MiterLimit="10" />
+                            </GeometryDrawing.Pen>
+                            <GeometryDrawing.Geometry>
+                                <LineGeometry StartPoint="3.5,7.5" EndPoint="7.5,10.5" />
+                            </GeometryDrawing.Geometry>
+                        </GeometryDrawing>
+                        <GeometryDrawing>
+                            <GeometryDrawing.Pen>
+                                <Pen Brush="#FF303C42" Thickness="1" StartLineCap="Round" EndLineCap="Round" LineJoin="Round" MiterLimit="10" />
+                            </GeometryDrawing.Pen>
+                            <GeometryDrawing.Geometry>
+                                <LineGeometry StartPoint="21.5,4.5" EndPoint="16.5,8.5" />
+                            </GeometryDrawing.Geometry>
+                        </GeometryDrawing>
+                        <GeometryDrawing>
+                            <GeometryDrawing.Pen>
+                                <Pen Brush="#FF303C42" Thickness="1" StartLineCap="Round" EndLineCap="Round" LineJoin="Round" MiterLimit="10" />
+                            </GeometryDrawing.Pen>
+                            <GeometryDrawing.Geometry>
+                                <LineGeometry StartPoint="20.5,7.5" EndPoint="16.5,10.5" />
+                            </GeometryDrawing.Geometry>
+                        </GeometryDrawing>
+                    </DrawingGroup>
+                </DrawingGroup>
+            </DrawingImage.Drawing>
+        </DrawingImage>
     </Window.Icon>
     
     <Grid>
@@ -122,7 +210,56 @@
             <Grid Grid.Row="0" Background="#AA000000"/>
             <Grid Grid.Row="2" Background="#AA000000"/>
             <Grid Grid.Row="1" Background="White">
-                <TextBlock Text="{Binding MensagemInicio, FallbackValue=Mensagem}" FontSize="30" FontWeight="Light" VerticalAlignment="Center" HorizontalAlignment="Center"></TextBlock>
+                <Grid>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="50"/>
+                        <RowDefinition Height="*"/>
+                    </Grid.RowDefinitions>
+
+                    <TextBlock Text="{Binding MensagemInicio, FallbackValue=Mensagem}" FontSize="30" FontWeight="Light" VerticalAlignment="Center" HorizontalAlignment="Left" Margin="50,0,0,0"></TextBlock>
+                    <StackPanel Grid.Row="1" Orientation="Vertical">
+                        <Grid>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="Auto"/>
+                                <ColumnDefinition Width="*"/>
+                                <ColumnDefinition Width="40"/>
+                                <ColumnDefinition Width="40"/>
+                                <ColumnDefinition Width="*"/>
+                            </Grid.ColumnDefinitions>
+                            <TextBlock Text="Escolha o painel:" FontSize="20" FontWeight="Light" VerticalAlignment="Center" HorizontalAlignment="Left" Margin="50,0,0,0"/>
+                            <ComboBox Grid.Column="1" ItemsSource="{Binding ListaPaineis}" Margin="5,0"/>
+                            <Button Grid.Column="2" />
+                            <ToggleButton x:Name="cmdTimer" Grid.Column="3" IsChecked="{Binding TempoParado}" VerticalContentAlignment="Center" HorizontalContentAlignment="Center">
+                                <ToggleButton.Style>
+                                    <Style TargetType="ToggleButton">
+                                        <Style.Triggers>
+                                            <Trigger Property="IsChecked" Value="true">
+                                                <Setter Property="Content" >
+                                                    <Setter.Value>
+                                                        <Viewbox HorizontalAlignment="Center" VerticalAlignment="Center">
+                                                            <Path Fill="Black" Data="M 44,46L 44,62L 41,62L 41,46L 44,46 Z M 45,46L 53,54L 45,62L 45,46 Z M 52.25,39.5834C 52.25,42.2298 51.6007,44.7245 50.4528,46.9171L 47.3572,44.2084C 47.762,43.2521 48.0451,42.2317 48.187,41.1667L 44.3333,41.1667L 44.3333,38L 48.187,38C 47.4819,32.7082 43.2918,28.5181 38,27.813L 38,31.6667L 34.8333,31.6667L 34.8333,27.813C 29.5415,28.5181 25.3513,32.7082 24.6463,38.0001L 28.5,38.0001L 28.5,41.1667L 24.6463,41.1667C 25.3513,46.4586 29.5415,50.6487 34.8333,51.3537L 34.8333,47.5L 38,47.5L 38,51.3537L 40,50.9769L 40,55.0759C 38.8237,55.2992 37.5423,55.4167 36.4166,55.4167C 27.6721,55.4167 20.5833,48.3279 20.5833,39.5834C 20.5833,31.3732 26.8322,24.6226 34.8333,23.8282L 34.8333,22.1667L 30.0833,22.1667L 30.0833,17.4167L 42.75,17.4167L 42.75,22.1667L 38,22.1667L 38,23.8282C 41.1844,24.1444 44.0913,25.404 46.4371,27.3237L 47.5795,26.1813L 45.3404,23.9421L 48.6991,20.5834L 55.4166,27.3009L 52.0579,30.6596L 49.8187,28.4205L 48.6763,29.5629C 50.9099,32.2923 52.25,35.7813 52.25,39.5834 Z M 36.4166,36.4167C 38.1655,36.4167 39.5833,37.8345 39.5833,39.5834C 39.5833,41.3323 38.1655,42.75 36.4166,42.75L 30.0833,47.5L 33.2499,39.5834C 33.2499,37.8345 34.6677,36.4167 36.4166,36.4167 Z "/>
+                                                        </Viewbox>
+                                                    </Setter.Value>
+                                                </Setter>
+                                            </Trigger>
+                                            <Trigger Property="IsChecked" Value="false">
+                                                <Setter Property="Content" >
+                                                    <Setter.Value>
+                                                        <Viewbox>
+                                                            <Path Fill="Black" Data="M 50.6667,38C 50.6667,39.0845 50.5576,40.1435 50.3499,41.1667L 46.2814,41.1667L 46.6037,39.5833L 42.75,39.5833L 42.75,36.4167L 46.6036,36.4167C 45.8986,31.1249 41.7085,26.9348 36.4166,26.2297L 36.4166,30.0834L 33.25,30.0834L 33.25,26.2297C 27.9581,26.9347 23.768,31.1249 23.0629,36.4167L 26.9166,36.4167L 26.9166,39.5834L 23.0629,39.5834C 23.768,44.8752 27.9581,49.0653 33.25,49.7704L 33.25,45.9167L 36.4166,45.9167L 36.4166,49.7704L 38,49.4481L 38,53.5166C 36.9768,53.7243 35.9178,53.8333 34.8333,53.8333C 26.0888,53.8333 19,46.7445 19,38C 19,29.7899 25.2489,23.0392 33.25,22.2448L 33.25,20.5833L 28.5,20.5833L 28.5,15.8333L 41.1667,15.8333L 41.1667,20.5833L 36.4167,20.5833L 36.4167,22.2448C 39.6011,22.561 42.508,23.8207 44.8538,25.7403L 45.9962,24.5979L 43.7571,22.3587L 47.1158,19L 53.8333,25.7175L 50.4746,29.0763L 48.2354,26.8371L 47.093,27.9795C 49.3266,30.709 50.6667,34.198 50.6667,38 Z M 34.8333,34.8334C 36.5822,34.8334 38,36.2512 38,38.0001C 38,39.7489 36.5822,41.1667 34.8333,41.1667L 28.5,45.9167L 31.6666,38.0001C 31.6666,36.2512 33.0844,34.8334 34.8333,34.8334 Z M 41.1667,44.3333L 45.9167,44.3333L 45.9167,58.5833L 41.1667,58.5833L 41.1667,44.3333 Z M 55.4167,44.3333L 55.4167,58.5833L 50.6667,58.5833L 50.6667,44.3333L 55.4167,44.3333 Z "/>
+                                                        </Viewbox>
+                                                    </Setter.Value>
+                                                </Setter>
+                                            </Trigger>
+                                        </Style.Triggers>
+                                    </Style>
+                                </ToggleButton.Style>
+                            </ToggleButton>
+                        </Grid>
+                    </StackPanel>
+                    
+                </Grid>
+                
             </Grid>
 
         </Grid>
