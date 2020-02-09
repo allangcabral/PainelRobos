@@ -1,4 +1,5 @@
-﻿using System;
+﻿using PainelRobos.ViewModels;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -18,11 +19,15 @@ namespace PainelRobos
     /// <summary>
     /// Interaction logic for MainWindow.xaml
     /// </summary>
-    public partial class MainWindow : Window
+    public partial class MainView : Window
     {
-        public MainWindow()
+        private MainViewModel _viewModel;
+
+        public MainView()
         {
             InitializeComponent();
+            _viewModel = new MainViewModel();
+            this.DataContext = _viewModel;
         }
     }
 }
