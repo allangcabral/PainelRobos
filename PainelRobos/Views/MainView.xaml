@@ -7,8 +7,11 @@
         mc:Ignorable="d"
         Title="{Binding Local}" Height="450" Width="800" FontFamily="Segoe UI" WindowStartupLocation="CenterScreen" >
 
+    <!--Site útil para paths = https://mavo.io/demos/svgpath/-->
+    
     <Window.Resources>
         <Path x:Key="iconMainWindow" Data="M144 96L424 96 352 216 424 336 144 336 144 96Z" Fill="Black"/>
+        <Path x:Key="Bender" Data="m 11.576271 0.3559322 c 1.1046 0 2 0.8954 2 2 0 0.8215 -0.7453 1.5274 -1.4536 1.8352 l 0.537 5.1653 c 3.8275 0.0447 6.9165 3.1613998 6.9165 6.9994998 l 10e-5 3 h -1.0001 c 2.2092 0 4 1.7909 4 4 v 2 c 0 2.2091 -1.7907 3.9999 -3.9997 4 h 0.9998 v 7.6003 c -1.8245 0.85 -4.7288 1.3997 -8 1.3997 -3.2711998 0 -6.1754998 -0.5497 -7.9999998 -1.3997 v -7.6003 h 0.9997 c -2.209 -10e-5 -3.99970001 -1.7909 -3.99970001 -4 v -2 c 0 -2.2091 1.79080001 -4 4.00000001 -4 h -1 v -3 c 0 -3.8381 3.089 -6.9547998 6.9165998 -6.9994998 l 0.537 -5.1653 c -0.7083 -0.3078 -1.4535998 -1.0137 -1.4535998 -1.8352 0 -1.1046 0.8953998 -2 1.9999998 -2 z m 6.9999 20.0000998 H 4.5761712 c -1.6568 0 -3 1.3431 -3 3 v 2 c 0 1.6568 1.3432 3 3 3 H 18.576171 c 1.6568 0 3 -1.3432 3 -3 v -2 c 0 -1.6569 -1.3432 -3 -3 -3 z m -6.9999 10.2499 -1 -0.2355 v 1.9855 h 2 v -1.9855 z m 6.9999 1.75 c 10e-5 -2 -0.7628 -1.677 -1.9999 -2.0046 v 2.0046 z m -4.9999 -1.9391 v 1.9391 h 2 v -1.9669 z m -5.9999998 -0.0278 v 1.9669 h 2 v -1.9391 z m -3 1.9669 h 2 v -2.0046 c -1.2372 0.3276 -2 0.0046 -2 2.0046 z m 6.9999998 3 1 -0.0228 v -1.9772 h -2 v 1.9772 z m 6.6475 -2 h -1.6475 v 1.1936 c 0.7917 -0.3391 1.3305 -0.7563 1.6475 -1.1936 z m -4.6475 0 v 1.9024 c 0.7607 -0.0794 1.4253 -0.2043 2 -0.363 v -1.5394 z m -5.9999998 0 v 1.5 h -0.1384 c 0.6057 0.1776 1.3158 0.3165 2.1384 0.4024 v -1.9024 z m -2.6477 0 c 0.3171 0.4373 0.8559 0.8545 1.6477 1.1936 v -1.1936 z m 1.6477 -10 h 2 v 2 h -2 z m 7.9999998 0 h 2 v 2 h -2 z m -10.0000998 -1.9999 h 1.1962 c -1.0164 0.6124 -1.6961 1.7268 -1.6961 2.9999 0 1.2732 0.6798 2.3876 1.6963 3.0001 h -1.1964 c -1.1045 0 -2 -0.8955 -2 -2 v -2 c 0 -1.1046 0.8955 -2 2 -2 z m 13.9999998 0 c 1.1045 0 2 0.8954 2 2 v 2 c 0 1.1045 -0.8955 2 -2 2 h -1.1962 c 1.0165 -0.6125 1.6963 -1.7269 1.6963 -3.0001 0 -1.2731 -0.6798 -2.3875 -1.6961 -2.9999 z m -9.1961998 6 c 1.0164998 -0.6125 1.6962998 -1.7269 1.6962998 -3.0001 0 -1.2731 -0.6798 -2.3875 -1.6960998 -2.9999 h 4.3921998 c -1.0164 0.6124 -1.6961 1.7268 -1.6961 2.9999 0 1.2732 0.6798 2.3876 1.6963 3.0001 z"/>
         <GeometryDrawing x:Key="imgFooDrawing" Brush="Black">
 
             <GeometryDrawing.Geometry>
@@ -218,7 +221,7 @@
 
                     <TextBlock Text="{Binding MensagemInicio, FallbackValue=Mensagem}" FontSize="30" FontWeight="Light" VerticalAlignment="Center" HorizontalAlignment="Left" Margin="50,0,0,0"></TextBlock>
                     <StackPanel Grid.Row="1" Orientation="Vertical">
-                        <Grid>
+                        <Grid Height="30">
                             <Grid.ColumnDefinitions>
                                 <ColumnDefinition Width="Auto"/>
                                 <ColumnDefinition Width="*"/>
@@ -228,8 +231,10 @@
                             </Grid.ColumnDefinitions>
                             <TextBlock Text="Escolha o painel:" FontSize="20" FontWeight="Light" VerticalAlignment="Center" HorizontalAlignment="Left" Margin="50,0,0,0"/>
                             <ComboBox Grid.Column="1" ItemsSource="{Binding ListaPaineis}" Margin="5,0"/>
-                            <Button Grid.Column="2" />
-                            <ToggleButton x:Name="cmdTimer" Grid.Column="3" IsChecked="{Binding TempoParado}" VerticalContentAlignment="Center" HorizontalContentAlignment="Center">
+                            <Button Grid.Column="2" Width="40" Command="{Binding IniciarCommand}" >
+                                Iniciar
+                            </Button>
+                            <ToggleButton x:Name="cmdTimer" Grid.Column="3" Width="30" IsChecked="{Binding TempoParado}" VerticalContentAlignment="Center" HorizontalContentAlignment="Center">
                                 <ToggleButton.Style>
                                     <Style TargetType="ToggleButton">
                                         <Style.Triggers>

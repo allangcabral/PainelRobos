@@ -1,4 +1,5 @@
-﻿using System;
+﻿using PainelRobos.Helpers;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Linq;
@@ -14,10 +15,11 @@ namespace PainelRobos.ViewModels
 		private const int _TEMPO_ESPERA_INICIAL = 10;
 		
 		private BackgroundWorker _backgroundInicio;
+		private ManualResetEvent _backgroundOcupado;
 
-        #region Propriedade com binding de controle de tela
+		#region Propriedade com binding de controle de tela
 
-        private string _local = $"Monitor Robôs - {System.Reflection.Assembly.GetAssembly(typeof(MainViewModel)).Location}";
+		private string _local = $"Monitor Robôs - {System.Reflection.Assembly.GetAssembly(typeof(MainViewModel)).Location}";
 
 		public string Local
 		{
@@ -64,26 +66,55 @@ namespace PainelRobos.ViewModels
 		public bool TempoParado
 		{
 			get { return _tempoParado; }
-			set { _tempoParado = value; OnPropertyChanged(); }
+			set 
+			{ 
+				_tempoParado = value; 
+				OnPropertyChanged();
+				if (TempoParado)
+					_backgroundOcupado.Reset();
+				else
+					_backgroundOcupado.Set();
+			}
 		}
 
 
-		#endregion
+        #endregion
 
+        #region Commands
+
+        public Command IniciarCommand { get; }
+
+		#endregion
 
 		public MainViewModel()
 		{
+			IniciarCommand = new Command(ExecuteIniciarCommand);
+
 			_backgroundInicio = new BackgroundWorker();
+			_backgroundOcupado = new ManualResetEvent(false);
+			_backgroundInicio.WorkerSupportsCancellation = true;
 			_backgroundInicio.DoWork += _backgroundInicio_DoWork;
 			_backgroundInicio.RunWorkerAsync();
-			
+			_backgroundOcupado.Set();
+
+		}
+
+		private void ExecuteIniciarCommand()
+		{
+			_backgroundInicio.CancelAsync();
+			Iniciando = false;
 		}
 
 		private void _backgroundInicio_DoWork(object sender, DoWorkEventArgs e)
 		{
 			int segundos = 0;
-			while(segundos < _TEMPO_ESPERA_INICIAL)
+
+			while (segundos < _TEMPO_ESPERA_INICIAL)
 			{
+				if (_backgroundInicio.CancellationPending == true)
+					return;
+
+				_backgroundOcupado.WaitOne();
 				MensagemInicio = $"Começando em { _TEMPO_ESPERA_INICIAL - segundos } segundos";
 				segundos++;
 
